@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+
+<VBox alignment="CENTER" spacing="10" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="s25.cs151.application.officeHoursController">
+    <padding>
+        <Insets bottom="10" left="20" right="20" top="10" />
+    </padding>
+
+    <Label text="Office Hour Information" style="-fx-font-size: 25px; -fx-font-weight: bold;"/>
+
+    <Label text="Input Year*:" />
+    <TextField fx:id="yearInput" prefWidth="50"/>
+
+    <Label text="Select Semester*:" />
+    <ComboBox fx:id="semesterDropdown" prefWidth="200" promptText="Select Semester" />
+
+    <Label text="Select Days*:" />
+    <HBox spacing="15" alignment="CENTER">
+        <CheckBox fx:id="mondayCheckbox" text="Monday" />
+        <CheckBox fx:id="tuesdayCheckbox" text="Tuesday" />
+        <CheckBox fx:id="wednesdayCheckbox" text="Wednesday" />
+        <CheckBox fx:id="thursdayCheckbox" text="Thursday" />
+        <CheckBox fx:id="fridayCheckbox" text="Friday" />
+    </HBox>
+
+    <Button onAction="#onSubmitButtonClick" text="Submit" />
+</VBox>
